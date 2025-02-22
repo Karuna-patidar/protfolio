@@ -11,27 +11,23 @@ const TextChange = () => {
 
     const interval = setInterval(() => {
       if (isTyping) {
-        // Typing effect
         if (charIndex < currentString.length) {
           setCurrentText(currentString.substring(0, charIndex + 1));
           setCharIndex((prev) => prev + 1);
         } else {
-          // Pause before deleting
           setIsTyping(false);
-          setTimeout(() => {}, 1000); // 1-second pause
+          setTimeout(() => {}, 1000);
         }
       } else {
-        // Deleting effect
         if (charIndex > 0) {
           setCurrentText(currentString.substring(0, charIndex - 1));
           setCharIndex((prev) => prev - 1);
         } else {
-          // Move to next text
           setIsTyping(true);
-          setTextIndex((prev) => (prev + 1) % texts.length); // Cycle texts
+          setTextIndex((prev) => (prev + 1) % texts.length);
         }
       }
-    }, 100); // Typing speed
+    }, 100); 
 
     return () => clearInterval(interval);
   }, [charIndex, isTyping, textIndex]);

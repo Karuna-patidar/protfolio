@@ -19,7 +19,7 @@ const Contact = () => {
       <ul className="text-sm md:text-xl">
         <li className="flex gap-1 items-center">
           <MdOutlineEmail size={20} />
-          <a href="mailto:karunaoatidar0206@gmail.com" target="_blank">  karunapatidar0206@gmail.com</a>
+          <a href="mailto:karunapatidar0206@gmail.com" target="_blank">  karunapatidar0206@gmail.com</a>
         </li>
         <li className="flex gap-1 items-center">
           <CiLinkedin />
